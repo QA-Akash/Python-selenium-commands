@@ -1,11 +1,9 @@
 import time
 
 from selenium import webdriver
-from selenium.webdriver import Keys
 from selenium.webdriver.chrome.service import Service as ChromeService
 from selenium.webdriver.common.by import By
 from webdriver_manager.chrome import ChromeDriverManager
-from selenium.webdriver.support.select import Select
 
 chrome_binary = "D:/chrome-win64/chrome-win64/chrome.exe"
 options = webdriver.ChromeOptions()
@@ -41,7 +39,7 @@ class DemoMultiWindow:
                 Hours_Dubai_Visa = driver.find_element(By.LINK_TEXT, "96 Hours Dubai Visa")
                 time.sleep(3)
                 driver.execute_script("arguments[0].click();", Hours_Dubai_Visa)
-                time.sleep(3)
+                time.sleep(2)
                 driver.close()
                 time.sleep(2)
                 break
